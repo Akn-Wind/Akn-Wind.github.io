@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://akn-wind.github.io</id>
     <title>Aksres&apos;s Blog</title>
-    <updated>2022-07-22T11:10:12.751Z</updated>
+    <updated>2022-07-22T11:14:29.021Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://akn-wind.github.io"/>
     <link rel="self" href="https://akn-wind.github.io/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://akn-wind.github.io/post/about/">
         </link>
         <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p><img src="https://akn-wind.github.io/post-images/1658488185497.jpg" alt="" loading="lazy">&gt;</p>
-<p>欢迎来到菜 Aksres 的小站！</p>
+        <content type="html"><![CDATA[<p>欢迎来到菜 Aksres 的小站！</p>
 <h2 id="关于本站">关于本站</h2>
 <p>本网站由 Aksres 搭建于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2021.5.4</mn></mrow><annotation encoding="application/x-tex">2021.5.4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span><span class="mord">1</span><span class="mord">.</span><span class="mord">5</span><span class="mord">.</span><span class="mord">4</span></span></span></span> ，由 Gridea 完成编辑，使用了 Github Page 。</p>
 <p>其实 Aksres 以前也有一个 <a href="https://aksres.github.io">Blog</a> 然而因为神奇的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord text"><span class="mord textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord text"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 原因废了。</p>
