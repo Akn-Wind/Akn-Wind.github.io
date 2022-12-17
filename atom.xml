@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://akn-wind.github.io</id>
     <title>Aksres&apos;s Blog</title>
-    <updated>2022-12-17T03:36:34.980Z</updated>
+    <updated>2022-12-17T07:08:26.282Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://akn-wind.github.io"/>
     <link rel="self" href="https://akn-wind.github.io/atom.xml"/>
@@ -10,6 +10,80 @@
     <logo>https://akn-wind.github.io/images/avatar.png</logo>
     <icon>https://akn-wind.github.io/favicon.ico</icon>
     <rights>All rights reserved 2022, Aksres&apos;s Blog</rights>
+    <entry>
+        <title type="html"><![CDATA[CSP2022J-ZJ游寄]]></title>
+        <id>https://akn-wind.github.io/post/csp2022j-travelnote/</id>
+        <link href="https://akn-wind.github.io/post/csp2022j-travelnote/">
+        </link>
+        <updated>2022-12-17T07:02:54.000Z</updated>
+        <content type="html"><![CDATA[<p>初中最后一次 CSP ，本着如果大寄特寄就滚回 whk 的心态开搞。</p>
+<p>复赛和期中考试时间差不多，危。</p>
+<h3 id="day-114514">Day -114514</h3>
+<p>一堆考试，场场被神 LYXin 吊打 50+</p>
+<p>初赛开启赌神，J 86，S30min速通<s>xjb乱蒙</s>获得了57的好成绩，由于ZJ大佬太多成功拜拜。</p>
+<p>J考完顺便在试卷上默了一遍岳阳楼记，然后在答题卷背面写了一个 LYXinAKIOI，不得不说ZJ小朋友真的多。</p>
+<p>此时这个 sb 还没有意识到S没过的重要性。</p>
+<p>回机房神 LYXin 宣称考了91.5，orz%%%%%%%%%%%%</p>
+<p>人均S 70，危</p>
+<p>用了一个冥间答案估出来86 ，和神cyc聊了会天就走人了</p>
+<h3 id="day-1">Day -1</h3>
+<p>最后一次去机房<s>假的</s></p>
+<p>随便敲了一个最短路，颓了一会，看了会小破刺的集锦，膜拜神LYXin。</p>
+<h3 id="day-0">Day 0</h3>
+<p>考点被临时改成了绍兴一中。</p>
+<p>下午出发，酒店有免费果汁和饼干，好评。</p>
+<p>没有找到神 LYXin ，找了家日料店，还不错。</p>
+<p>之后回酒店考试爆肝whk ，神 LYXin 扬言要 AK CSPS。</p>
+<p>神 LYXin 大概和我隔了4个房间，于是开始隔空<s>骚扰</s>喊话，然而并没有人鸟。</p>
+<p>据说神 LYXin 带了npy一起来，果然神就是神。</p>
+<p>cyc差1.5pts进复赛，祝好。</p>
+<p>刷了会红题调节心情，神 LYXin 和大家一起在打游戏，然而我妈不让。</p>
+<p>晚上大概23：30左右早点睡了，sb酒店枕头太高，差评。这tm脊柱炎得睡出来。</p>
+<h3 id="day-1-2">Day 1</h3>
+<p>早上碰到神 LYXin 在吃早饭，本来这个酒店只能带两人，但是我们全家都混了进去。</p>
+<p>出发去考场，绍兴这路确实一言难尽，各种修路+奇怪的辅道+奇怪的环岛，到考场发现正好有神 LYXin，神 LYXin 甚至有一个极其豪华的手机。</p>
+<p>打印的一堆材料都没用。绍兴一中校门有点小。</p>
+<p>之后到楼上，我是计算机教室 2 ，和神江戸川_コナン<s>好难打qwq</s>在一起。</p>
+<p>旁边的人开始玩扫雷。</p>
+<p>sb监考老师把密码少给了一个u，rp--</p>
+<p>电脑垃圾的一批，老古董i5-6200，而且sublime和vscode全没有，只能用sbdevc++，不过有g++9.3.0还行。<s>nd为了用上sublime我还背了一晚上 make 文件</s></p>
+<p>开题，一眼t1,,t2完全平方解决，测了大样例，拿下没问题，开了t3</p>
+<p>旁边的人继续玩扫雷。</p>
+<p>t3感觉有点裸，先做第一问，就是一个表达式求值，但是 但是</p>
+<p><strong>这个sb在草稿纸上算了一个小时都还没搞清楚tmd怎么用栈算表达式！！！！！</strong></p>
+<p>然后，由于在订正 2020J t3 时候在摸鱼，甚至没有想到一个叫做表达式树的东西。。。。</p>
+<p>【数据删除】×infinty</p>
+<p>开考两个小时后开始看t4，此时t3一分没写。</p>
+<p>t4应该是一个dp，但是由于被t3整的脑子一片氢氧化铁，导致写最长不上升子序列的时候完全没有想到怎么扔进题目里。</p>
+<p>但是现在满脑子都是t3，于是写了一个k=0暴力和一个<s>优雅的</s>骗分莫名其妙的艹过了大样例之后再去看t3。</p>
+<p>旁边的人还是在玩扫雷。</p>
+<p>先写了前 15 分的暴力，然后蒙了一下三种特殊情况，但是稳的只有前15分，然后只剩半个小时了。</p>
+<p>又看着t4题面发了会呆，发现t3性质3写挂了，然后怎么调都调不好。</p>
+<p>然后一脸sb地走出了考场。</p>
+<hr>
+<p>神LYXin说他A了t4。</p>
+<p>出考场后发现大家都A了t4。</p>
+<p>【数据删除】×infinty</p>
+<p>之后和大家吃了中饭就回家了，因为这个sb没进tg。</p>
+<p>晚上为了泄愤看了小破刺的比赛，不出意外的话就出意外了，差点没看出心脏病，<s>果然悲愤是会传染的（元首</s>。</p>
+<h3 id="day-2">Day 2</h3>
+<p>代码公布了，去洛谷测了一下：</p>
+<p>100+100+10+45=255</p>
+<p>t3果然挂掉了，果然大模拟不会写（多多大哭</p>
+<p>这个分可能是刚好卡上一等，也有可能完蛋，慌的一批。</p>
+<p>神 LYXin 290，orz%%%%%%</p>
+<h3 id="day-after">Day after</h3>
+<p>最终成绩 100+100+35+50=285，艹过了一=线。</p>
+<p>t3这种半吊子骗分有35我也很惊讶，t4也高了10pts，感谢ccf的馈赠。</p>
+<p>考完之后就没再想这些东西了，毕竟whk才是祸害之首。机房还是有时候去摸鱼，唯一的遗憾是没有进提高。由于一些众所周知的总司令，tg一般随便乱写一下，t3全输出no就能混到一个二等。而在我们这边，tg二等和pj一等是等价的。</p>
+<p>神 LYXin tg161，太巨了。</p>
+<hr>
+<p>虽然这个sb已经初三了，但也是第一次才拿到pj1=，所以个人感觉还是可以的吧，毕竟初中这几年正经算法没学几个，颓废技能会了一大堆，就OI这事whk也烂的不浅<s>说白了就是自己菜</s>，但至少，也是给自己有个交代了吧。</p>
+<p>没进tg确实很遗憾，似乎已经没了特长生的机会，之后这个菜比就要去弄whk了，三年，或者说五年的摸鱼也快要结束了吧。</p>
+<p>以后高中还不知道会不会继续学习OI，一想到这次考完后很可能告别OI，心里也有点离谱吧。似乎我已经习惯了这种晚上去机房的生活，习惯了作为一个不太专业的OIer这种既莫名其妙又有点兴奋的生活，突然就这么离开了，要和其他人一样迷失在内卷资料中，那....就这样吧。</p>
+<p>希望以后考一个好点的高中吧。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[将你的 Sublime Text 3 打造成完美的 c++ 编辑器]]></title>
         <id>https://akn-wind.github.io/post/jiang-ni-de-sublime-text-3-da-zao-cheng-wan-mei-de-c-bian-ji-qi/</id>
