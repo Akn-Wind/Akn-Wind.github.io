@@ -1,25 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://akn-wind.github.io</id>
-    <title>Aksres&apos;s Blog</title>
-    <updated>2022-12-18T03:19:14.808Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://akn-wind.github.io"/>
-    <link rel="self" href="https://akn-wind.github.io/atom.xml"/>
-    <subtitle>Aksres 的 小站</subtitle>
-    <logo>https://akn-wind.github.io/images/avatar.png</logo>
-    <icon>https://akn-wind.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2022, Aksres&apos;s Blog</rights>
-    <entry>
-        <title type="html"><![CDATA[题解【算法1-6】二分查找与二分答案]]></title>
-        <id>https://akn-wind.github.io/post/Solution-Training-1-6-Luogu/</id>
-        <link href="https://akn-wind.github.io/post/Solution-Training-1-6-Luogu/">
-        </link>
-        <updated>2022-12-18T03:08:07.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="t1-p2249-深基13例1查找"><a href="https://www.luogu.com.cn/problem/P2249">T1 P2249 【深基13.例1】查找</a></h3>
-<p>二分查找的板子</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="t1-p2249-深基13例1查找"><a href="https://www.luogu.com.cn/problem/P2249">T1 P2249 【深基13.例1】查找</a></h3>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>题解【算法1-6】二分查找与二分答案 | Aksres&#39;s Blog</title>
+<meta name="description" content="Aksres 的 小站">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://akn-wind.github.io/favicon.ico?v=1671333538950">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://akn-wind.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://akn-wind.github.io">
+        <img class="avatar" src="https://akn-wind.github.io/images/avatar.png?v=1671333538950" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://akn-wind.github.io">
+        <h1 class="site-title">Aksres&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">题解【算法1-6】二分查找与二分答案</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-12-18</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://akn-wind.github.io/tag/by7S3ce3c/">
+                    题解
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h3 id="t1-p2249-深基13例1查找"><a href="https://www.luogu.com.cn/problem/P2249">T1 P2249 【深基13.例1】查找</a></h3>
 <p>二分查找的板子</p>
 <!--more-->
 <p>二分查找需要定义三个变量，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi></mrow><annotation encoding="application/x-tex">l</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span></span></span></span> (序列的左端)，<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span> (序列的右端)和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>m</mi><mi>i</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">mid</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span></span></span></span> (中间点)。二分查找的前提是<strong>序列有序</strong>（一般是升序排列）。</p>
@@ -449,263 +526,58 @@ int main()
 }
 </code></pre>
 <!-- more -->
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSP2022J-ZJ游寄]]></title>
-        <id>https://akn-wind.github.io/post/csp2022j-travelnote/</id>
-        <link href="https://akn-wind.github.io/post/csp2022j-travelnote/">
-        </link>
-        <updated>2022-12-17T07:02:54.000Z</updated>
-        <content type="html"><![CDATA[<p>初中最后一次 CSP ，本着如果大寄特寄就滚回 whk 的心态开搞。</p>
-<p>复赛和期中考试时间差不多，危。</p>
-<h3 id="day-114514">Day -114514</h3>
-<p>一堆考试，场场被神 LYXin 吊打 50+</p>
-<p>初赛开启赌神，J 86，S30min速通<s>xjb乱蒙</s>获得了57的好成绩，由于ZJ大佬太多成功拜拜。</p>
-<p>J考完顺便在试卷上默了一遍岳阳楼记，然后在答题卷背面写了一个 LYXinAKIOI，不得不说ZJ小朋友真的多。</p>
-<p>此时这个 sb 还没有意识到S没过的重要性。</p>
-<p>回机房神 LYXin 宣称考了91.5，orz%%%%%%%%%%%%</p>
-<p>人均S 70，危</p>
-<p>用了一个冥间答案估出来86 ，和神cyc聊了会天就走人了</p>
-<h3 id="day-1">Day -1</h3>
-<p>最后一次去机房<s>假的</s></p>
-<p>随便敲了一个最短路，颓了一会，看了会小破刺的集锦，膜拜神LYXin。</p>
-<h3 id="day-0">Day 0</h3>
-<p>考点被临时改成了绍兴一中。</p>
-<p>下午出发，酒店有免费果汁和饼干，好评。</p>
-<p>没有找到神 LYXin ，找了家日料店，还不错。</p>
-<p>之后回酒店考试爆肝whk ，神 LYXin 扬言要 AK CSPS。</p>
-<p>神 LYXin 大概和我隔了4个房间，于是开始隔空<s>骚扰</s>喊话，然而并没有人鸟。</p>
-<p>据说神 LYXin 带了npy一起来，果然神就是神。</p>
-<p>cyc差1.5pts进复赛，祝好。</p>
-<p>刷了会红题调节心情，神 LYXin 和大家一起在打游戏，然而我妈不让。</p>
-<p>晚上大概23：30左右早点睡了，sb酒店枕头太高，差评。这tm脊柱炎得睡出来。</p>
-<h3 id="day-1-2">Day 1</h3>
-<p>早上碰到神 LYXin 在吃早饭，本来这个酒店只能带两人，但是我们全家都混了进去。</p>
-<p>出发去考场，绍兴这路确实一言难尽，各种修路+奇怪的辅道+奇怪的环岛，到考场发现正好有神 LYXin，神 LYXin 甚至有一个极其豪华的手机。</p>
-<p>打印的一堆材料都没用。绍兴一中校门有点小。</p>
-<p>之后到楼上，我是计算机教室 2 ，和神江戸川_コナン<s>好难打qwq</s>在一起。</p>
-<p>旁边的人开始玩扫雷。</p>
-<p>sb监考老师把密码少给了一个u，rp--</p>
-<p>电脑垃圾的一批，老古董i5-6200，而且sublime和vscode全没有，只能用sbdevc++，不过有g++9.3.0还行。<s>nd为了用上sublime我还背了一晚上 make 文件</s></p>
-<p>开题，一眼t1,,t2完全平方解决，测了大样例，拿下没问题，开了t3</p>
-<p>旁边的人继续玩扫雷。</p>
-<p>t3感觉有点裸，先做第一问，就是一个表达式求值，但是 但是</p>
-<p><strong>这个sb在草稿纸上算了一个小时都还没搞清楚tmd怎么用栈算表达式！！！！！</strong></p>
-<p>然后，由于在订正 2020J t3 时候在摸鱼，甚至没有想到一个叫做表达式树的东西。。。。</p>
-<p>【数据删除】×infinty</p>
-<p>开考两个小时后开始看t4，此时t3一分没写。</p>
-<p>t4应该是一个dp，但是由于被t3整的脑子一片氢氧化铁，导致写最长不上升子序列的时候完全没有想到怎么扔进题目里。</p>
-<p>但是现在满脑子都是t3，于是写了一个k=0暴力和一个<s>优雅的</s>骗分莫名其妙的艹过了大样例之后再去看t3。</p>
-<p>旁边的人还是在玩扫雷。</p>
-<p>先写了前 15 分的暴力，然后蒙了一下三种特殊情况，但是稳的只有前15分，然后只剩半个小时了。</p>
-<p>又看着t4题面发了会呆，发现t3性质3写挂了，然后怎么调都调不好。</p>
-<p>然后一脸sb地走出了考场。</p>
-<hr>
-<p>神LYXin说他A了t4。</p>
-<p>出考场后发现大家都A了t4。</p>
-<p>【数据删除】×infinty</p>
-<p>之后和大家吃了中饭就回家了，因为这个sb没进tg。</p>
-<p>晚上为了泄愤看了小破刺的比赛，不出意外的话就出意外了，差点没看出心脏病，<s>果然悲愤是会传染的（元首</s>。</p>
-<h3 id="day-2">Day 2</h3>
-<p>代码公布了，去洛谷测了一下：</p>
-<p>100+100+10+45=255</p>
-<p>t3果然挂掉了，果然大模拟不会写（多多大哭</p>
-<p>这个分可能是刚好卡上一等，也有可能完蛋，慌的一批。</p>
-<p>神 LYXin 290，orz%%%%%%</p>
-<h3 id="day-after">Day after</h3>
-<p>最终成绩 100+100+35+50=285，艹过了一=线。</p>
-<p>t3这种半吊子骗分有35我也很惊讶，t4也高了10pts，感谢ccf的馈赠。</p>
-<p>考完之后就没再想这些东西了，毕竟whk才是祸害之首。机房还是有时候去摸鱼，唯一的遗憾是没有进提高。由于一些众所周知的总司令，tg一般随便乱写一下，t3全输出no就能混到一个二等。而在我们这边，tg二等和pj一等是等价的。</p>
-<p>神 LYXin tg161，太巨了。</p>
-<hr>
-<p>虽然这个sb已经初三了，但也是第一次才拿到pj1=，所以个人感觉还是可以的吧，毕竟初中这几年正经算法没学几个，颓废技能会了一大堆，就OI这事whk也烂的不浅<s>说白了就是自己菜</s>，但至少，也是给自己有个交代了吧。</p>
-<p>没进tg确实很遗憾，似乎已经没了特长生的机会，之后这个菜比就要去弄whk了，三年，或者说五年的摸鱼也快要结束了吧。</p>
-<p>以后高中还不知道会不会继续学习OI，一想到这次考完后很可能告别OI，心里也有点离谱吧。似乎我已经习惯了这种晚上去机房的生活，习惯了作为一个不太专业的OIer这种既莫名其妙又有点兴奋的生活，突然就这么离开了，要和其他人一样迷失在内卷资料中，那....就这样吧。</p>
-<p>希望以后考一个好点的高中吧。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[将你的 Sublime Text 3 打造成完美的 c++ 编辑器]]></title>
-        <id>https://akn-wind.github.io/post/jiang-ni-de-sublime-text-3-da-zao-cheng-wan-mei-de-c-bian-ji-qi/</id>
-        <link href="https://akn-wind.github.io/post/jiang-ni-de-sublime-text-3-da-zao-cheng-wan-mei-de-c-bian-ji-qi/">
-        </link>
-        <updated>2021-12-17T03:23:03.000Z</updated>
-        <content type="html"><![CDATA[<h3 id="part-1-update">Part -1 Update</h3>
-<p><strong>Update1 2021-2-28</strong> 更新图片<br>
-<strong>Update2 2022-12-17</strong>  一些图片挂了，在修</p>
-<h3 id="part-0-前言">Part 0 前言</h3>
-<p>搭建需要的东西都在 <a href="https://pan.baidu.com/s/1tytGGIjlWZ_-LIu3YKOINQ">这个链接</a> 中。</p>
-<p>提取码：7sap</p>
-<p>Sublime Text 3 是一种实用性较强的编辑工具。</p>
-<p><s>没错就这么多</s></p>
-<p><s>诶不是还能说什么</s></p>
-<h3 id="part-1-下载配置-sublime-text-3">Part 1 下载配置 Sublime Text 3</h3>
-<p><strong>下载</strong></p>
-<p><a href="http://www.sublimetext.cn/">官网</a></p>
-<p>当然也可以用我的安装包下载。版本号为 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3211</mn></mrow><annotation encoding="application/x-tex">3211</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span><span class="mord">1</span><span class="mord">1</span></span></span></span>。</p>
-<p>下载完成后，打开 Sublime ，你会看到这样一个界面。</p>
-<p>如果没有找到， 就 Win + R ，输入 Sublime 回车。</p>
-<figure data-type="image" tabindex="1"><img src="https://pic.imgdb.cn/item/639d3788b1fccdcd36b57775.png" alt="yzq658.png" loading="lazy"></figure>
-<p>（最右下角有个框，是代码语言选择区）</p>
-<p>先别急着操作，在你的 Sublime 下载目录下新建一个叫 Data 的文件夹，重启 Sublime ，然后你的数据就会被保存到 Data 里。</p>
-<p><strong>激活 Sublime</strong></p>
-<p>如果看到左上方显示 UNREGISTERED ，就是说你的 Sublime 没有激活。</p>
-<p>先查看版本号， 点击 <code>Help &gt; About Sublime Text</code> ，找到 Build 后面的数字，然后百度一下激活码。将激活码粘贴到 <code>Help &gt; Enter Lisence</code> 。</p>
-<p>下面是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>3211</mn></mrow><annotation encoding="application/x-tex">3211</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mord">2</span><span class="mord">1</span><span class="mord">1</span></span></span></span> 的激活码</p>
-<pre><code>----- BEGIN LICENSE -----
-Member J2TeaM
-Single User License
-EA7E-1011316
-D7DA350E 1B8B0760 972F8B60 F3E64036
-B9B4E234 F356F38F 0AD1E3B7 0E9C5FAD
-FA0A2ABE 25F65BD8 D51458E5 3923CE80
-87428428 79079A01 AA69F319 A1AF29A4
-A684C2DC 0B1583D4 19CBD290 217618CD
-5653E0A0 BACE3948 BB2EE45E 422D2C87
-DD9AF44B 99C49590 D2DBDEE1 75860FD2
-8C8BB2AD B2ECE5A4 EFC08AF2 25A9B864
------- END LICENSE ------
-</code></pre>
-<p><strong>配置 Package Control</strong></p>
-<p><strong>阅读以下步骤前，请确保 Sublime 已经激活！</strong></p>
-<p>Package Control 是 Sublime 的插件管理器，必须要安装 Package Control 才能下载和使用插件。</p>
-<p>安装 Package Control 有两种办法。第一种办法是 Ctrl + ` 打开以下界面。在红色标记的地方输入以下代码：</p>
-<pre><code>import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
-</code></pre>
-<figure data-type="image" tabindex="2"><img src="https://pic.imgdb.cn/item/639d37bab1fccdcd36b5d9a9.png" alt="" loading="lazy"></figure>
-<p>但是，如果你不会珂学上网或者翻墙，这种方法很可能不行，这时候就要采用第二种方法。</p>
-<p>在 Sublime 的安装目录下打开 <code>Data &gt; Installed Packages</code> ，将材料里的 <code>Package Control.sublime-package</code> 复制到这个文件夹里。重启 Sublime 。如果看到 Preferences 里出现了红色圈圈里的两个东西，就说明安装成功了。</p>
-<figure data-type="image" tabindex="3"><img src="https://pic.imgdb.cn/item/639d37e3b1fccdcd36b634ed.png" alt="yR5uSU.png" loading="lazy"></figure>
-<p><strong>配置 channel</strong></p>
-<p><s>千万不要下载完 Package Control 就不看这一步啊，报错了别来找我啊</s></p>
-<p>材料里有一个 <code>channel_v3.json</code> ，把它放到 Sublime 的下载文件夹里。</p>
-<p>打开 <code>Preferences &gt; Package Settings &gt; Package Control &gt; Setting - User</code> ，在 <code>&quot;bootstrapped&quot;: true,</code> 后面粘贴以下内容（那个路径就是你放这个文件的路径）</p>
-<figure data-type="image" tabindex="4"><img src="https://i.loli.net/2021/02/18/5BATh9oPYHtb24G.png" alt="Screenshot_4.png" loading="lazy"></figure>
-<pre><code class="language-javascript">&quot;channels&quot;:
-[
-		&quot;D:/Sublime Text 3/channel_v3.json&quot; 
-],
-</code></pre>
-<p>然后就可以了。</p>
-<p><strong>安装插件和主题</strong></p>
-<p>Sublime 本身提供了几种主题和配色方案，可以在这里寻找。</p>
-<figure data-type="image" tabindex="5"><img src="https://i.loli.net/2021/02/18/vikxJ4tIMjlYzTN.png" alt="Screenshot_5.png" loading="lazy"></figure>
-<p>安装插件同样有两种办法，一种是 <code>Ctrl + Shift + P</code> 打开并找到 <code>Install Package</code>  ，然后输入插件名下载。</p>
-<p>如果下载几十分钟都没出来，说明插件被墙了，这时候就需要百度，从<s>插件官网</s> Github 上把插件包搞下来，解压后放到 <code>Data &gt; Packages</code> 里。然后就能使用了。</p>
-<p>这里推荐一个主题 ： Ayu</p>
-<p>这个主题有三种，Dark , Light 和 mirage 。</p>
-<p>食用效果 ：</p>
-<figure data-type="image" tabindex="6"><img src="https://i.loli.net/2021/02/18/1XVdO8g3MeLT9Ew.png" alt="Screenshot_6.png" loading="lazy"></figure>
-<p>再推荐两个配色方案， <code>One Dark</code> 和 <code>Solarized Light</code> 。</p>
-<p>食用效果 ：</p>
-<p><code>One Dark</code> :</p>
-<figure data-type="image" tabindex="7"><img src="https://i.loli.net/2021/02/23/taCqx82fjYyVHKr.png" alt="Screenshot_3.png" loading="lazy"></figure>
-<p><code>Solarized Light</code> ：</p>
-<figure data-type="image" tabindex="8"><img src="https://i.loli.net/2021/02/23/47TQ6ck3jFryiNZ.png" alt="Screenshot_2.png" loading="lazy"></figure>
-<p>如果需要汉化，可以在 Install package 里搜索 ChineseLocalizations 并下载，这个插件不会被墙掉。然后在 <code>Help &gt; Languages</code> 中更改语言。</p>
-<p><strong>卸载插件</strong></p>
-<p><code>Ctrl + Shift + P</code> 并找到 <code>Remove Packages</code> 选择要删除的插件。</p>
-<p><strong>推荐几个好用的插件</strong></p>
-<ul>
-<li><code>Convert to UTF8</code> 解决中文乱码 <a href="https://github.com/seanliang/ConvertToUTF8">项目地址</a></li>
-<li><code>Git</code> 将你的 Sublime 变成 Git 编辑器，基本上涵盖了 Git 软件的内容 （可以用 <code>Package Control</code> 下载）</li>
-<li><code>SublimeREPL</code> 实现程序交互，可以让 Python ， F# ，PHP ， Ruby ， Lua 等一堆语言可以输入。</li>
-<li><code>Less</code> 支持 Less 程序高亮。</li>
-<li><code>Emmet</code> 编写快捷键。 <a href="https://docs.emmet.io/">官网</a></li>
-<li><code>JSformet</code> 格式化 Javascript 代码<br>
-<a href="https://github.com/jdavisclark/JsFormat">项目地址</a></li>
-</ul>
-<h3 id="part-2-下载配置-c-编译环境">Part 2 下载配置 C++ 编译环境</h3>
-<p><strong>安装 TDM-GCC</strong></p>
-<p>TDM-GCC 是一款 C++ 编译器，不用 Mingw64 的原因是这个菜鸡到现在还不知道 Mingw 怎么用。。。</p>
-<p>TDM-GCC的安装包在材料里。<a href="https://jmeubank.github.io/tdm-gcc/">这是官网</a></p>
-<p>这是 TDM-GCC 的安装界面，打开后点击 Create ，然后无脑式安装就可以了。<strong>一定要把左下打圈圈的钩子给去掉！！！！！！</strong></p>
-<figure data-type="image" tabindex="9"><img src="https://i.loli.net/2021/02/19/BLIR3AhQezK1dur.png" alt="Screenshot_7.png" loading="lazy"></figure>
-<p><strong>验证和配制环境变量</strong></p>
-<p>TDM-GCC 应该会自动帮你配置环境变量。但是也需要检查一下。</p>
-<p>打开 cmd ，输入 <code>gcc -v</code> 如果没有报错就是成功。应该会出现如下界面。</p>
-<figure data-type="image" tabindex="10"><img src="https://i.loli.net/2021/02/19/9oINJeLFQKDnlGg.png" alt="Screenshot_8.png" loading="lazy"></figure>
-<p>但是报错的话，就需要手动配置环境变量。</p>
-<p>右键桌面上的计算机图标，点击属性，点击高级系统设置 &gt; 高级 &gt; 环境变量 ，在下面的系统变量中找到 Path ，点击编辑，打一个分号之后输入你 TDM-GCC 的安装路径，再在后面打一个 <code>\bin</code> ，对我来说就是 <code>C:\TDM-GCC-64\bin</code></p>
-<figure data-type="image" tabindex="11"><img src="https://i.loli.net/2021/02/26/MIY72b5lxPetj68.png" alt="Screenshot_9.png" loading="lazy"></figure>
-<p>然后再验证一下<s>没事找事</s></p>
-<h3 id="part-3-搭建-c-环境">Part 3 搭建 c++ 环境</h3>
-<p><strong>新建编译选项</strong></p>
-<p>点击 <code>Tools &gt; Build System &gt; New Build Systen</code> ，将里面的内容替换为以下内容 ：</p>
-<pre><code class="language-javascript">{
-    &quot;encoding&quot;: &quot;utf-8&quot;,
 
-    &quot;working_dir&quot;: &quot;$file_path&quot;,
+          </div>
+        </div>
 
-    &quot;shell_cmd&quot;: &quot;g++ -Wall -std=c++11 \&quot;$file_name\&quot; -o \&quot;$file_base_name\&quot;&quot;,
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://akn-wind.github.io/post/csp2022j-travelnote/">
+              <h3 class="post-title">
+                下一篇：CSP2022J-ZJ游寄
+              </h3>
+            </a>
+          </div>
+          
+      </div>
 
-    &quot;file_regex&quot;: &quot;^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$&quot;,
+      
 
-    &quot;selector&quot;: &quot;source.c++&quot;,
- 
-    &quot;variants&quot;:
-    [
-        {  
-        &quot;name&quot;: &quot;Sublime Run&quot;,
-            &quot;shell_cmd&quot;: &quot;g++ -Wall -std=c++11 \&quot;$file_name\&quot; -o \&quot;$file_base_name\&quot; &amp;&amp; cmd /c \&quot;${file_path}/${file_base_name}\&quot;&quot;
-        },
-        {  
-        &quot;name&quot;: &quot;CMD Run&quot;,
-            &quot;shell_cmd&quot;: &quot;g++ -Wall -std=c++11 \&quot;$file\&quot; -o \&quot;$file_base_name\&quot; &amp;&amp; start cmd /c \&quot;\&quot;${file_path}/${file_base_name}\&quot; &amp; pause\&quot;&quot;
-        }
-    ]
-}
-</code></pre>
-<p>其中 <code>&quot;name&quot;:</code> 后面名字的可以自己更改。</p>
-<p>Ctrl + S <strong>不要更改路径</strong>保存为 <code>name.sublime-build</code> 其中 <code>name</code> 里的可以自己更改<s>有时候你会觉得自己发明了一个语言</s></p>
-<p><strong>编译运行</strong></p>
-<p>Ctrl + Shift + B ,你会发现三个框。</p>
-<p>第一个框就是检查一下你有没有编译错误 （相当于 Dev 的编译），第二个框是在 sublime 的内置终端内运行，没什么用因为不能实现输入。一般用的就是第三个 ，像 Dev 一样在 cmd 内运行。</p>
-<p><strong>设置快捷键</strong></p>
-<p>Ctrl + Shift + B 用不惯 ？可以设置快捷键！</p>
-<p>点击 <code>Preferences &gt; Key Bingdings</code> 在框内输入以下代码</p>
-<pre><code class="language-javascript">{ &quot;keys&quot;: [&quot;f6&quot;], &quot;command&quot;: &quot;build&quot;, &quot;args&quot;: {&quot;select&quot;: true} }
-</code></pre>
-<p>这样你的编译运行只要点一下 <code>F6</code> 就会出来框。</p>
-<p><strong>录制宏</strong></p>
-<p>想要秒出代码？</p>
-<p>新建一个空白页，然后 Ctrl + Q ，输入你想录制的宏，然后再次 Ctrl + Q 。如果录制成功的话左下角会显示 <code>recorded macro with xxx commands</code> 。</p>
-<p><code>Tools &gt; Save Macro</code> 不要更改路径保存为 <code>name.sublime-macro</code> 。 <code>name</code> 里的自行更改。</p>
-<p>然后点击 <code>Preferences &gt; Key Bingdings</code> ，在右边加入以下代码 ：</p>
-<pre><code class="language-javascript">{ &quot;keys&quot;: [&quot;ctrl+d&quot;], &quot;command&quot;:&quot;run_macro_file&quot;, &quot;args&quot;:{&quot;file&quot;:&quot;Packages/User/name.sublime-macro&quot;} }
-</code></pre>
-<p><code>name</code> 就是你保存的名字。</p>
-<p>快捷键可以自己更改，但是 Sublime 的快捷键非常多，所以建议在更改前点击 <code>Find &gt; Find</code> 查找一下有没有冲突。</p>
-<p>如果右下角显示 <code>Unable to find xxxxx</code> ，就表明可以使用。</p>
-<p><strong>Part 4 后记</strong></p>
-<p>初次接触 Sublime 应该是搭建 hexo 博客的时候。。。</p>
-<p>然后自己搭建编译器和编辑器的时候，几乎是把 OI-Wiki 上的都试遍了，但是还是弄不出来。。。<s>明明就是自己菜</s></p>
-<p>然后就想到了 Sublime ，然后发现确实很好用。。。</p>
-<p><s>然后就没有然后了</s></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于]]></title>
-        <id>https://akn-wind.github.io/post/about/</id>
-        <link href="https://akn-wind.github.io/post/about/">
-        </link>
-        <updated>2019-01-25T11:09:48.000Z</updated>
-        <content type="html"><![CDATA[<p>欢迎来到菜 Aksres 的小站！</p>
-<h2 id="关于本站">关于本站</h2>
-<p>本网站由 Aksres 搭建于 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>2021.5.4</mn></mrow><annotation encoding="application/x-tex">2021.5.4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span><span class="mord">0</span><span class="mord">2</span><span class="mord">1</span><span class="mord">.</span><span class="mord">5</span><span class="mord">.</span><span class="mord">4</span></span></span></span> ，由 Gridea 完成编辑，使用了 Github Page 。</p>
-<p>其实 Aksres 以前也有一个 <a href="https://aksres.github.io">Blog</a> 然而因为神奇的 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord text"><span class="mord textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord text"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 原因废了。</p>
-<p>又因为 Aksres 对于 cmd 一窍不通，就有了这个 Gridea Blog 。</p>
-<p>Update on 2022.4.4 :  <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mtext>LaTeX</mtext></mrow><annotation encoding="application/x-tex">\LaTeX</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.89883em;vertical-align:-0.2155em;"></span><span class="mord text"><span class="mord textrm">L</span><span class="mspace" style="margin-right:-0.36em;"></span><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.68333em;"><span style="top:-2.904999em;"><span class="pstrut" style="height:2.7em;"></span><span class="mord text"><span class="mord textrm sizing reset-size6 size3">A</span></span></span></span></span></span><span class="mspace" style="margin-right:-0.15em;"></span><span class="mord text"><span class="mord textrm">T</span><span class="mspace" style="margin-right:-0.1667em;"></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.46782999999999997em;"><span style="top:-2.7845em;"><span class="pstrut" style="height:3em;"></span><span class="mord text"><span class="mord textrm">E</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2155em;"><span></span></span></span></span><span class="mspace" style="margin-right:-0.125em;"></span><span class="mord textrm">X</span></span></span></span></span></span> 现在又坏了，但是我懒得修 （</p>
-<p>Update on 2022.12.17 :  修好了，只是换了个主题</p>
-<h2 id="about-me">About Me</h2>
-<p>My Luogu :</p>
-<figure data-type="image" tabindex="1"><img src="https://luogu.wao3.cn/api/practice?id=332299" alt="我的练习情况" loading="lazy"></figure>
-<figure data-type="image" tabindex="2"><img src="https://luogu.wao3.cn/api/guzhi?id=332299&amp;scores=100,34,37,62,0" alt="我的练习情况" loading="lazy"></figure>
-<p>My Github :     挂了</p>
-<p>My Codeforces : <s>unrated 不拉出来丢人了</s></p>
-<p>My AtCoder : <s>unrated 不拉出来丢人了</s></p>
-<p>My Bilibili : <a href="https://space.bilibili.com/569474186">This</a></p>
-]]></content>
-    </entry>
-</feed>
+      <div class="site-footer">
+  <div class="slogan">Aksres 的 小站</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>  Yiche-Aksres 2019 | <a class="rss" href="https://akn-wind.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

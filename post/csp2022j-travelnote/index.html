@@ -1,110 +1,102 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>CSP2022J-ZJ游寄 | Aksres&#39;s Blog</title>
-<link rel="shortcut icon" href="https://akn-wind.github.io/favicon.ico?v=1671276447269">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="Aksres 的 小站">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://akn-wind.github.io/favicon.ico?v=1671333538950">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://akn-wind.github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="CSP2022J-ZJ游寄 | Aksres&#39;s Blog - Atom Feed" href="https://akn-wind.github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="初中最后一次 CSP ，本着如果大寄特寄就滚回 whk 的心态开搞。
-复赛和期中考试时间差不多，危。
-Day -114514
-一堆考试，场场被神 LYXin 吊打 50+
-初赛开启赌神，J 86，S30min速通xjb乱蒙获得了57的好成绩..." />
-    <meta name="keywords" content="随笔" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://akn-wind.github.io">
-  <img class="avatar" src="https://akn-wind.github.io/images/avatar.png?v=1671276447269" alt="">
-  </a>
-  <h1 class="site-title">
-    Aksres&#39;s Blog
-  </h1>
-  <p class="site-description">
-    Aksres 的 小站
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="/post/about" class="menu">
-          关于
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-        <a href="https://github.com/Akn-Wind" target="_blank">
-          <i class="ri-github-line"></i>
-        </a>
-      
-    
-      
-    
-      
-    
-      
-        <a href="https://www.zhihu.com/people/aksres" target="_blank">
-          <i class="ri-zhihu-line"></i>
-        </a>
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://akn-wind.github.io">
+        <img class="avatar" src="https://akn-wind.github.io/images/avatar.png?v=1671333538950" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://akn-wind.github.io">
+        <h1 class="site-title">Aksres&#39;s Blog</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              CSP2022J-ZJ游寄
-            </h2>
-            <div class="post-info">
-              <span>
-                2022-12-17
-              </span>
-              <span>
-                6 min read
-              </span>
-              
-                <a href="https://akn-wind.github.io/tag/OI2zHq0il/" class="post-tag">
-                  # 随笔
-                </a>
-              
-            </div>
+          
+          <h2 class="post-title">CSP2022J-ZJ游寄</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-12-17</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>初中最后一次 CSP ，本着如果大寄特寄就滚回 whk 的心态开搞。</p>
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://akn-wind.github.io/tag/OI2zHq0il/">
+                    随笔
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <p>初中最后一次 CSP ，本着如果大寄特寄就滚回 whk 的心态开搞。</p>
 <p>复赛和期中考试时间差不多，危。</p>
 <h3 id="day-114514">Day -114514</h3>
 <p>一堆考试，场场被神 LYXin 吊打 50+</p>
@@ -171,92 +163,57 @@ Day -114514
 <p>以后高中还不知道会不会继续学习OI，一想到这次考完后很可能告别OI，心里也有点离谱吧。似乎我已经习惯了这种晚上去机房的生活，习惯了作为一个不太专业的OIer这种既莫名其妙又有点兴奋的生活，突然就这么离开了，要和其他人一样迷失在内卷资料中，那....就这样吧。</p>
 <p>希望以后考一个好点的高中吧。</p>
 
-              </div>
-              <div class="toc-container">
-                <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#day-114514">Day -114514</a></li>
-<li><a href="#day-1">Day -1</a></li>
-<li><a href="#day-0">Day 0</a></li>
-<li><a href="#day-1-2">Day 1</a></li>
-<li><a href="#day-2">Day 2</a></li>
-<li><a href="#day-after">Day after</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
           <div class="next-post">
-            <div class="next">下一篇</div>
-            <a href="https://akn-wind.github.io/post/jiang-ni-de-sublime-text-3-da-zao-cheng-wan-mei-de-c-bian-ji-qi/">
+            <a class="purple-link" href="https://akn-wind.github.io/post/jiang-ni-de-sublime-text-3-da-zao-cheng-wan-mei-de-c-bian-ji-qi/">
               <h3 class="post-title">
-                将你的 Sublime Text 3 打造成完美的 c++ 编辑器
+                下一篇：将你的 Sublime Text 3 打造成完美的 c++ 编辑器
               </h3>
             </a>
           </div>
-        
+          
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>   <\br>  Yiche-Aksres 2019
-  <a class="rss" href="https://akn-wind.github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">Aksres 的 小站</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>  Yiche-Aksres 2019 | <a class="rss" href="https://akn-wind.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
